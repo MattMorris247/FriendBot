@@ -121,6 +121,8 @@ public class FriendBotDriver {
             runSad();
         } else if (ans.equals("3") || ans.equals("overwhelmed")) {
             runOverwhelmed();
+        } else if (ans.equals("4") || ans.equals("anxious")) {
+            runAnxious();
         } else if (ans.equals("4") || ans.equals("stressed")) {
             runStressed();
         } else if (ans.equals("5") || ans.equals("lonely")) {
@@ -135,6 +137,77 @@ public class FriendBotDriver {
             System.out
                     .println(RED + "Sorry, I couldn't read your response, please try using the options above." + RESET);
             promptUser();
+        }
+    }
+
+    public static void runAnxious() {
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "Well I am here to make you feel better. What's making you feel anxious?" + RESET);
+        System.out.print(BLUE + "Your Response " + YELLOW + "*FP*" + BLUE + ": " + RESET);
+        String freeResponseAnswer = keyboard.nextLine();
+
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "That's understandable, but don't worry, everything will be okay. Would you like to me to tell you ways to calm you down?"
+                + RESET);
+        System.out.println(CYAN + "1) Yes");
+        System.out.println("2) No \n");
+        System.out.print(BLUE + "Your Response : " + RESET);
+        String yesOrNo = keyboard.nextLine().toLowerCase();
+        if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
+            System.out.println(PURP + "friendBot: " + GREEN
+                    + " Try taking a few deep breaths! Or you can do an activity to help calm you down, such as cooking,walking, or reading a good book! "
+                    + RESET);
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + " For more information about overcoming anxiety, check out this link : "
+                            + YELLOW
+                            + "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/11-tips-for-coping-with-an-anxiety-disorder\n\n");
+
+            System.out.println(
+                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
+            System.exit(0);
+        } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+            runNoResponse();
+        } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+            System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+            System.exit(0); // System exit 0 = clean exit.
+        } else {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                            + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            boolean on2 = true;
+            while (on2) {
+                String yesOrNo2 = keyboard.nextLine().toLowerCase();
+                if (yesOrNo2.equals("yes") || yesOrNo2.equals("1")) {
+                    System.out.println(PURP + "friendBot: " + GREEN
+                            + " Try taking a few deep breaths! Or you can do an activity to help calm you down, such as cooking,walking, or reading a good book! "
+                            + RESET);
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + " For more information about overcoming anxiety, check out this link : "
+                                    + YELLOW
+                                    + "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/11-tips-for-coping-with-an-anxiety-disorder\n\n");
+
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
+                                    + RESET);
+                    System.exit(0);
+                } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+                    runNoResponse();
+                } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+                    System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+                    System.exit(0); // System exit 0 = clean exit.
+                } else {
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                                    + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                }
+            }
+
         }
     }
 
