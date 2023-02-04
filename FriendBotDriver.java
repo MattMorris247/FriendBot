@@ -125,10 +125,10 @@ public class FriendBotDriver {
             runStressed();
         } else if (ans.equals("5") || ans.equals("lonely")) {
             runLonely();
-        } else if (ans.equals("6") || ans.equals("Excited")) {
+        } else if (ans.equals("6") || ans.equals("excited")) {
             runExcited();
-        } else if (ans.equals("7") || ans.equals("happy")) {
-            runHappy();
+        } else if (ans.equals("7") || ans.equals("embarrassed")) {
+            runEmbarrassed();
         } else if (ans.equals("8") || ans.equals("happy")) {
             runHappy();
         } else {
@@ -136,6 +136,76 @@ public class FriendBotDriver {
                     .println(RED + "Sorry, I couldn't read your response, please try using the options above." + RESET);
             promptUser();
         }
+    }
+
+    public static void runEmbarrassed() {
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "Aww, I am sorry you're feeling that way. What happened?" + RESET);
+        System.out.print(BLUE + "Your Response " + YELLOW + "*FP*" + BLUE + ": " + RESET);
+        String freeResponseAnswer = keyboard.nextLine();
+
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "Don't worry, everything will be okay. Would you like to me to encourage you more?"
+                + RESET);
+        System.out.println(CYAN + "1) Yes");
+        System.out.println("2) No \n");
+        System.out.print(BLUE + "Your Response : " + RESET);
+        String yesOrNo = keyboard.nextLine().toLowerCase();
+        if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
+            System.out.println(PURP + "friendBot: " + GREEN
+                    + " Everyone makes mistakes. People only remember the mistakes they make, not others'!! "
+                    + RESET);
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + " For more information about overcoming embarrassment, check out this link : "
+                            + YELLOW + "https://psychcentral.com/blog/how-to-overcome-embarrassment\n\n");
+
+            System.out.println(
+                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
+            System.exit(0);
+        } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+            runNoResponse();
+        } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+            System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+            System.exit(0); // System exit 0 = clean exit.
+        } else {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                            + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            boolean on2 = true;
+            while (on2) {
+                String yesOrNo2 = keyboard.nextLine().toLowerCase();
+                if (yesOrNo2.equals("yes") || yesOrNo2.equals("1")) {
+                    System.out.println(PURP + "friendBot: " + GREEN
+                            + " Everyone makes mistakes. People only remember the mistakes they make, not others'!! "
+                            + RESET);
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + " For more information about overcoming embarrassment, check out this link : "
+                                    + YELLOW + "https://psychcentral.com/blog/how-to-overcome-embarrassment\n\n");
+
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
+                                    + RESET);
+                    System.exit(0);
+                } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+                    runNoResponse();
+                } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+                    System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+                    System.exit(0); // System exit 0 = clean exit.
+                } else {
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                                    + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                }
+            }
+
+        }
+
     }
 
     public static void runExcited() {
