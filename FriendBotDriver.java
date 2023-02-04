@@ -48,12 +48,13 @@ public class FriendBotDriver {
                 "     \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___|  \\__\\___/  " + GREEN
                         + "|_|  |_|  |_|\\___|_| |_|\\__,_|" + CYAN + " |____/ \\___/ \\__| (_)"
                         + BLUE + "            -Molly Gilson and Matt Morris" + RESET);
-        System.out.println("\n\n\n\n"); // Spacing
+        System.out.println("\n\n"); // Spacing
     }
 
     public static void continueTalking() {
 
-        System.out.println(PURP + "friendBot: " + GREEN + "You wanted to talk some more! How are you feeling?" + RESET);
+        System.out
+                .println(PURP + "friendBot: " + GREEN + " You wanted to talk some more! How are you feeling?" + RESET);
         System.out.println(YELLOW + "**Responses availible**" + CYAN);
         System.out.println("1) Happy");
         System.out.println("2) Sad");
@@ -64,7 +65,7 @@ public class FriendBotDriver {
         System.out.println("7) Excited");
         System.out.println("8) Embarrassed");
         System.out.println("9) Tired");
-        System.out.println("10) one more");
+        System.out.println("10) Confused");
         System.out.println(RESET);
 
     }
@@ -73,13 +74,13 @@ public class FriendBotDriver {
 
         // How to Respond
         System.out.println(YELLOW
-                + "**You can respond to friendBot using either the number (1,2,3) or the respective text(happy,sad,mad)**"
+                + "**You can respond to friendBot using either the number (1,2,3) or the respective text(happy,sad,tired)**"
                 + RESET);
         System.out.println(
                 YELLOW + "                                   ** Messages marked with *FP* are Free Response  **"
                         + RESET);
         System.out.println(
-                YELLOW + "                                     ** Enter quit (or q) at anytime to leave.  **\n"
+                YELLOW + "                                     ** Enter quit (or q) at anytime to leave  **\n"
                         + RESET);
 
         // Initial Greeting
@@ -164,11 +165,13 @@ public class FriendBotDriver {
                     PURP + "friendBot: " + GREEN
                             + " For more information about dealing with confusion, check out this link : "
                             + YELLOW
-                            + "https://divethru.com/feeling-confused-a-guide-to-your-emotions/\n\n");
+                            + "https://divethru.com/feeling-confused-a-guide-to-your-emotions/\n");
 
             System.out.println(
-                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
-            System.exit(0);
+                    PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            keepTalking();
+
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             runNoResponse();
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -191,12 +194,13 @@ public class FriendBotDriver {
                             PURP + "friendBot: " + GREEN
                                     + " For more information about getting your energy back, check out this link : "
                                     + YELLOW
-                                    + "https://www.webmd.com/balance/features/get-energy-back\n\n");
+                                    + "https://www.webmd.com/balance/features/get-energy-back\n");
 
                     System.out.println(
-                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
-                                    + RESET);
-                    System.exit(0);
+                            PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                    keepTalking();
+
                 } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
                     runNoResponse();
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -236,11 +240,13 @@ public class FriendBotDriver {
                     PURP + "friendBot: " + GREEN
                             + " For more information about getting your energy back, check out this link : "
                             + YELLOW
-                            + "https://www.webmd.com/balance/features/get-energy-back\n\n");
+                            + "https://www.webmd.com/balance/features/get-energy-back\n");
 
             System.out.println(
-                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
-            System.exit(0);
+                    PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            keepTalking();
+
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             runNoResponse();
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -263,12 +269,13 @@ public class FriendBotDriver {
                             PURP + "friendBot: " + GREEN
                                     + " For more information about getting your energy back, check out this link : "
                                     + YELLOW
-                                    + "https://www.webmd.com/balance/features/get-energy-back\n\n");
+                                    + "https://www.webmd.com/balance/features/get-energy-back\n");
 
                     System.out.println(
-                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
-                                    + RESET);
-                    System.exit(0);
+                            PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                    keepTalking();
+
                 } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
                     runNoResponse();
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -307,11 +314,13 @@ public class FriendBotDriver {
                     PURP + "friendBot: " + GREEN
                             + " For more information about overcoming anxiety, check out this link : "
                             + YELLOW
-                            + "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/11-tips-for-coping-with-an-anxiety-disorder\n\n");
+                            + "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/11-tips-for-coping-with-an-anxiety-disorder\n");
 
             System.out.println(
-                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
-            System.exit(0);
+                    PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            keepTalking();
+
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             runNoResponse();
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -334,12 +343,12 @@ public class FriendBotDriver {
                             PURP + "friendBot: " + GREEN
                                     + " For more information about overcoming anxiety, check out this link : "
                                     + YELLOW
-                                    + "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/11-tips-for-coping-with-an-anxiety-disorder\n\n");
+                                    + "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/11-tips-for-coping-with-an-anxiety-disorder\n");
 
                     System.out.println(
-                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
-                                    + RESET);
-                    System.exit(0);
+                            PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                    keepTalking();
                 } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
                     runNoResponse();
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -377,11 +386,12 @@ public class FriendBotDriver {
             System.out.println(
                     PURP + "friendBot: " + GREEN
                             + " For more information about overcoming embarrassment, check out this link : "
-                            + YELLOW + "https://psychcentral.com/blog/how-to-overcome-embarrassment\n\n");
+                            + YELLOW + "https://psychcentral.com/blog/how-to-overcome-embarrassment\n");
 
             System.out.println(
-                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
-            System.exit(0);
+                    PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            keepTalking();
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             runNoResponse();
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -403,12 +413,12 @@ public class FriendBotDriver {
                     System.out.println(
                             PURP + "friendBot: " + GREEN
                                     + " For more information about overcoming embarrassment, check out this link : "
-                                    + YELLOW + "https://psychcentral.com/blog/how-to-overcome-embarrassment\n\n");
+                                    + YELLOW + "https://psychcentral.com/blog/how-to-overcome-embarrassment\n");
 
                     System.out.println(
-                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
-                                    + RESET);
-                    System.exit(0);
+                            PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                    keepTalking();
                 } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
                     runNoResponse();
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -446,11 +456,12 @@ public class FriendBotDriver {
                     + RESET);
             System.out.println(
                     PURP + "friendBot: " + GREEN + " For more information about being excited, check out this link : "
-                            + YELLOW + "https://divethru.com/feeling-excited-a-guide-to-your-emotions/\n\n");
+                            + YELLOW + "https://divethru.com/feeling-excited-a-guide-to-your-emotions/\n");
 
             System.out.println(
-                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
-            System.exit(0);
+                    PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            keepTalking();
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             runNoResponse();
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -472,12 +483,12 @@ public class FriendBotDriver {
                     System.out.println(
                             PURP + "friendBot: " + GREEN
                                     + " For more information about being excited, check out this link : "
-                                    + YELLOW + "https://divethru.com/feeling-excited-a-guide-to-your-emotions/\n\n");
+                                    + YELLOW + "https://divethru.com/feeling-excited-a-guide-to-your-emotions/\n");
 
                     System.out.println(
-                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
-                                    + RESET);
-                    System.exit(0);
+                            PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                    keepTalking();
                 } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
                     runNoResponse();
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -517,11 +528,12 @@ public class FriendBotDriver {
                     .println(PURP + "friendBot: " + GREEN
                             + " For more ways to deal with loneliness, you can visit this link: "
                             + YELLOW
-                            + "https://www.cigna.com/knowledge-center/how-to-deal-with-loneliness\n\n");
+                            + "https://www.cigna.com/knowledge-center/how-to-deal-with-loneliness\n");
 
             System.out.println(
-                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
-            System.exit(0);
+                    PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            keepTalking();
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             runNoResponse();
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -544,12 +556,12 @@ public class FriendBotDriver {
                             .println(PURP + "friendBot: " + GREEN
                                     + " For more ways to deal with loneliness, you can visit this link: "
                                     + YELLOW
-                                    + "https://www.cigna.com/knowledge-center/how-to-deal-with-loneliness\n\n");
+                                    + "https://www.cigna.com/knowledge-center/how-to-deal-with-loneliness\n");
 
                     System.out.println(
-                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
-                                    + RESET);
-                    System.exit(0);
+                            PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                    keepTalking();
                 } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
                     runNoResponse();
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -589,11 +601,12 @@ public class FriendBotDriver {
                     .println(PURP + "friendBot: " + GREEN
                             + " For more ways to ease your stress, you can visit this link: "
                             + YELLOW
-                            + "https://www.cdc.gov/violenceprevention/about/copingwith-stresstips.html\n\n");
+                            + "https://www.cdc.gov/violenceprevention/about/copingwith-stresstips.html\n");
 
             System.out.println(
-                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
-            System.exit(0);
+                    PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            keepTalking();
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             runNoResponse();
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -616,12 +629,12 @@ public class FriendBotDriver {
                             .println(PURP + "friendBot: " + GREEN
                                     + " For more ways to ease your stress, you can visit this link: "
                                     + YELLOW
-                                    + "https://www.cdc.gov/violenceprevention/about/copingwith-stresstips.html\n\n");
+                                    + "https://www.cdc.gov/violenceprevention/about/copingwith-stresstips.html\n");
 
                     System.out.println(
-                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
-                                    + RESET);
-                    System.exit(0);
+                            PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                    keepTalking();
                 } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
                     runNoResponse();
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -660,11 +673,12 @@ public class FriendBotDriver {
             System.out
                     .println(PURP + "friendBot: " + GREEN + " For more ways to calm down, you can visit this link: "
                             + YELLOW
-                            + "https://www.mentalhealthfirstaid.org/2021/03/how-to-take-care-of-yourself-when-youre-feeling-overwhelmed\n\n");
+                            + "https://www.mentalhealthfirstaid.org/2021/03/how-to-take-care-of-yourself-when-youre-feeling-overwhelmed\n");
 
             System.out.println(
-                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
-            System.exit(0);
+                    PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            keepTalking();
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             runNoResponse();
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -687,12 +701,12 @@ public class FriendBotDriver {
                             .println(PURP + "friendBot: " + GREEN
                                     + " For more ways to calm down, you can visit this link: "
                                     + YELLOW
-                                    + "https://www.mentalhealthfirstaid.org/2021/03/how-to-take-care-of-yourself-when-youre-feeling-overwhelmed\n\n");
+                                    + "https://www.mentalhealthfirstaid.org/2021/03/how-to-take-care-of-yourself-when-youre-feeling-overwhelmed\n");
 
                     System.out.println(
-                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
-                                    + RESET);
-                    System.exit(0);
+                            PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                    keepTalking();
                 } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
                     runNoResponse();
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -708,6 +722,28 @@ public class FriendBotDriver {
             }
 
         }
+    }
+
+    public static void keepTalking() {
+        String resp = keyboard.nextLine().toLowerCase();
+        if (resp.equals("1") || resp.equals("yes")) {
+            continueTalking();
+        } else if (resp.equals("2") || resp.equals("no")) {
+            System.out.println(PURP + "friendBot: " + GREEN
+                    + "Okay, I hope you have a great rest of your day !" + RESET);
+            System.exit(0);
+        } else if (resp.equals("q") || resp.equals("quit")) {
+            System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+            System.exit(0); // System exit 0 = clean exit.
+        } else {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                            + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            keepTalking();
+        }
+
     }
 
     public static void runHappy() {
@@ -728,11 +764,13 @@ public class FriendBotDriver {
                     + " You can stay happy by doing activites you enjoy or even just getting out and relaxing in the Sun!  "
                     + RESET);
             System.out.println(PURP + "friendBot: " + GREEN + " For more ways to stay happy, you can visit this link: "
-                    + YELLOW + "https://www.cigna.com/knowledge-center/how-to-be-happy\n\n");
+                    + YELLOW + "https://www.cigna.com/knowledge-center/how-to-be-happy\n");
 
             System.out.println(
-                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
-            System.exit(0);
+                    PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            keepTalking();
+
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             runNoResponse();
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -753,12 +791,13 @@ public class FriendBotDriver {
                             + RESET);
                     System.out.println(
                             PURP + "friendBot: " + GREEN + " For more ways to stay happy, you can visit this link: "
-                                    + YELLOW + "https://www.cigna.com/knowledge-center/how-to-be-happy\n\n");
+                                    + YELLOW + "https://www.cigna.com/knowledge-center/how-to-be-happy\n");
 
                     System.out.println(
-                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
-                                    + RESET);
-                    System.exit(0);
+                            PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                    keepTalking();
+
                 } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
                     runNoResponse();
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -798,11 +837,12 @@ public class FriendBotDriver {
             System.out
                     .println(PURP + "friendBot: " + GREEN
                             + " For more ways to overcome sadness, you can visit this link: "
-                            + YELLOW + "https://www.cdc.gov/howrightnow/resources/coping-with-sadness/index.html\n\n");
+                            + YELLOW + "https://www.cdc.gov/howrightnow/resources/coping-with-sadness/index.html\n");
 
             System.out.println(
-                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
-            System.exit(0);
+                    PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            keepTalking();
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             runNoResponse();
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -825,12 +865,12 @@ public class FriendBotDriver {
                             .println(PURP + "friendBot: " + GREEN
                                     + " For more ways to overcome sadness, you can visit this link: "
                                     + YELLOW
-                                    + "https://www.cdc.gov/howrightnow/resources/coping-with-sadness/index.html\n\n");
+                                    + "https://www.cdc.gov/howrightnow/resources/coping-with-sadness/index.html\n");
 
                     System.out.println(
-                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
-                                    + RESET);
-                    System.exit(0);
+                            PURP + "friendBot: " + GREEN + " Would you like to keep talking?" + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                    keepTalking();
                 } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
                     runNoResponse();
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
@@ -859,7 +899,6 @@ public class FriendBotDriver {
 
         if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
             continueTalking();
-
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             System.out.println(
                     PURP + "friendBot: " + GREEN + " Okay, I hope you have a great rest of your day ! Goodbye! "
