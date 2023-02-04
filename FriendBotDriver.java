@@ -113,9 +113,23 @@ public class FriendBotDriver {
     public static void responseReader(String resp) {
         String ans = resp.toLowerCase();
         if (ans.equals("q") || ans.equals("quit")) {
-            System.out.println(PURP + "friendBot: Good bye! Have a good day !" + RESET);
+            System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
             System.exit(0); // System exit 0 = clean exit.
         } else if (ans.equals("1") || ans.equals("happy")) {
+            runHappy();
+        } else if (ans.equals("2") || ans.equals("sad")) {
+            runSad();
+        } else if (ans.equals("3") || ans.equals("happy")) {
+            runHappy();
+        } else if (ans.equals("4") || ans.equals("happy")) {
+            runHappy();
+        } else if (ans.equals("5") || ans.equals("happy")) {
+            runHappy();
+        } else if (ans.equals("6") || ans.equals("happy")) {
+            runHappy();
+        } else if (ans.equals("7") || ans.equals("happy")) {
+            runHappy();
+        } else if (ans.equals("8") || ans.equals("happy")) {
             runHappy();
         } else {
             System.out
@@ -150,7 +164,7 @@ public class FriendBotDriver {
         } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
             runNoResponse();
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
-            System.out.println(PURP + "friendBot: Good bye! Have a good day !" + RESET);
+            System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
             System.exit(0); // System exit 0 = clean exit.
         } else {
             System.out.println(
@@ -176,7 +190,78 @@ public class FriendBotDriver {
                 } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
                     runNoResponse();
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
-                    System.out.println(PURP + "friendBot: Good bye! Have a good day !" + RESET);
+                    System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+                    System.exit(0); // System exit 0 = clean exit.
+                } else {
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                                    + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                }
+            }
+
+        }
+
+    }
+
+    public static void runSad() {
+
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "Aww, cheer up buttercup! What is making you feel sad? " + RESET);
+        System.out.print(BLUE + "Your Response " + YELLOW + "*FP*" + BLUE + ": " + RESET);
+        String freeResponseAnswer = keyboard.nextLine();
+
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "I am sorry to hear that :( . Don't worry, it will pass. Would you like to hear about ways to overcome sadness?"
+                + RESET);
+        System.out.println(CYAN + "1) Yes");
+        System.out.println("2) No \n");
+        System.out.print(BLUE + "Your Response : " + RESET);
+        String yesOrNo = keyboard.nextLine().toLowerCase();
+        if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
+            System.out.println(PURP + "friendBot: " + GREEN
+                    + " You can stay overcome your sadness by being around other people or watching your favorite movie! Pets are also a great companion to help boost your mood."
+                    + RESET);
+            System.out
+                    .println(PURP + "friendBot: " + GREEN + " For more ways to over sadness, you can visit this link: "
+                            + YELLOW + "https://www.cdc.gov/howrightnow/resources/coping-with-sadness/index.html\n\n");
+
+            System.out.println(
+                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
+            System.exit(0);
+        } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+            runNoResponse();
+        } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+            System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+            System.exit(0); // System exit 0 = clean exit.
+        } else {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                            + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            boolean on2 = true;
+            while (on2) {
+                String yesOrNo2 = keyboard.nextLine().toLowerCase();
+                if (yesOrNo2.equals("yes") || yesOrNo2.equals("1")) {
+                    System.out.println(PURP + "friendBot: " + GREEN
+                            + " You can stay overcome your sadness by being around other people or watching your favorite movie! Pets are also a great companion to help boost your mood."
+                            + RESET);
+                    System.out
+                            .println(PURP + "friendBot: " + GREEN
+                                    + " For more ways to over sadness, you can visit this link: "
+                                    + YELLOW
+                                    + "https://www.cdc.gov/howrightnow/resources/coping-with-sadness/index.html\n\n");
+
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
+                                    + RESET);
+                    System.exit(0);
+                } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+                    runNoResponse();
+                } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+                    System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
                     System.exit(0); // System exit 0 = clean exit.
                 } else {
                     System.out.println(
@@ -207,7 +292,7 @@ public class FriendBotDriver {
                     PURP + "friendBot: " + GREEN + " Okay, I hope you have a great rest of your day ! Goodbye! "
                             + RESET);
         } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
-            System.out.println(PURP + "friendBot: Good bye! Have a good day !" + RESET);
+            System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
             System.exit(0); // System exit 0 = clean exit.
         }
 
@@ -228,7 +313,7 @@ public class FriendBotDriver {
                                     + "Okay, I hope you have a great rest of your day! Goodbye !");
                     System.exit(0);
                 } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
-                    System.out.println(PURP + "friendBot: Good bye! Have a good day !" + RESET);
+                    System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
                     System.exit(0); // System exit 0 = clean exit.
                 } else {
                     System.out.println(
