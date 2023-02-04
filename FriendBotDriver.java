@@ -13,9 +13,29 @@ public class FriendBotDriver {
     public static final String RED = "\u001B[31m";
 
     public static void main(String[] args) {
+        welcomePrompt();
+    }
 
-        System.out.println("Hello World");
-
+    public static void welcomePrompt() {
+        System.out.println(BLUE +
+                " __          __  _                            _          " + GREEN + "______    _                _   "
+                + BLUE + "____        _     _ ");
+        System.out.println(
+                " \\ \\        / / | |                          | |        " + GREEN
+                        + "|  ____|  (_)              | |" + BLUE + " |  _ \\      | |   | |");
+        System.out.println(
+                "  \\ \\  /\\  / /__| | ___ ___  _ __ ___   ___  | |_ ___   " + GREEN
+                        + "| |__ _ __ _  ___ _ __   __| |" + BLUE + " | |_) | ___ | |_  | |");
+        System.out.println(
+                "   \\ \\/  \\/ / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ | __/ _ \\  " + GREEN
+                        + "|  __| '__| |/ _ \\ '_ \\ / _` |" + BLUE + " |  _ < / _ \\| __| | |");
+        System.out.println(
+                "    \\  /\\  /  __/ | (_| (_) | | | | | |  __/ | || (_) | " + GREEN
+                        + "| |  | |  | |  __/ | | | (_| |" + BLUE + " | |_) | (_) | |_  |_|");
+        System.out.println(
+                "     \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___|  \\__\\___/  " + GREEN
+                        + "|_|  |_|  |_|\\___|_| |_|\\__,_|" + BLUE + " |____/ \\___/ \\__| (_)"
+                        + RESET);
     }
 
 }
