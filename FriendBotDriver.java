@@ -133,10 +133,84 @@ public class FriendBotDriver {
             runEmbarrassed();
         } else if (ans.equals("9") || ans.equals("tired")) {
             runTired();
+        } else if (ans.equals("10") || ans.equals("confused")) {
+            runConfused();
         } else {
             System.out
                     .println(RED + "Sorry, I couldn't read your response, please try using the options above." + RESET);
             promptUser();
+        }
+    }
+
+    public static void runConfused() {
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "I am a computer, and even I get confused sometimes! What is confusing you?"
+                + RESET);
+        System.out.print(BLUE + "Your Response " + YELLOW + "*FP*" + BLUE + ": " + RESET);
+        String freeResponseAnswer = keyboard.nextLine();
+
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "I can see how that can be confusing, journaling your thoughts may help you have a better understanding of what is going on. Would you like to hear more tips? "
+                + RESET);
+        System.out.println(CYAN + "1) Yes");
+        System.out.println("2) No \n");
+        System.out.print(BLUE + "Your Response : " + RESET);
+        String yesOrNo = keyboard.nextLine().toLowerCase();
+        if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
+            System.out.println(PURP + "friendBot: " + GREEN
+                    + " Give yourself a pep talk! Affirmations can help you be more confident and think clearer."
+                    + RESET);
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + " For more information about dealing with confusion, check out this link : "
+                            + YELLOW
+                            + "https://divethru.com/feeling-confused-a-guide-to-your-emotions/\n\n");
+
+            System.out.println(
+                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
+            System.exit(0);
+        } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+            runNoResponse();
+        } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+            System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+            System.exit(0); // System exit 0 = clean exit.
+        } else {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                            + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            boolean on2 = true;
+            while (on2) {
+                String yesOrNo2 = keyboard.nextLine().toLowerCase();
+                if (yesOrNo2.equals("yes") || yesOrNo2.equals("1")) {
+                    System.out.println(PURP + "friendBot: " + GREEN
+                            + " If you can't nap, try to exercise or simulate your mind until you are ready to sleep. Try to make a plan to get in bed earlier. We all need sleep!"
+                            + RESET);
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + " For more information about getting your energy back, check out this link : "
+                                    + YELLOW
+                                    + "https://www.webmd.com/balance/features/get-energy-back\n\n");
+
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
+                                    + RESET);
+                    System.exit(0);
+                } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+                    runNoResponse();
+                } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+                    System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+                    System.exit(0); // System exit 0 = clean exit.
+                } else {
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                                    + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                }
+            }
+
         }
     }
 
