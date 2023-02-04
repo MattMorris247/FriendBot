@@ -13,6 +13,9 @@ public class FriendBotDriver {
     public static final String PURP = "\u001B[35m";
     public static final String RED = "\u001B[31m";
     public static final String CYAN = "\u001B[36m";
+
+    // Boolean to turn off/on response loop...
+    public static boolean on = true;
     // Scanner Object to read user input
     public static Scanner keyboard = new Scanner(System.in);
 
@@ -55,6 +58,9 @@ public class FriendBotDriver {
                 + "**You can respond to friendBot using either the number (1,2,3) or the respective text(happy,sad,mad)**"
                 + RESET);
         System.out.println(
+                YELLOW + "                                   **Messages marked with *FP* are Free Response**"
+                        + RESET);
+        System.out.println(
                 YELLOW + "                                   **Enter quit (or q) at anytime to leave.**\n" + RESET);
 
         // Initial Greeting
@@ -74,7 +80,7 @@ public class FriendBotDriver {
     }
 
     public static void promptUser() {
-        boolean on = true;
+
         while (on) {
             System.out.print(BLUE + "Your Response : " + RESET);
             String respond = keyboard.nextLine();
@@ -101,5 +107,26 @@ public class FriendBotDriver {
 
     public static void runHappy() {
         System.out.println(RED + "DEBUG - inside Happy" + RESET);
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "Yay! That is great to hear! What is making you feel happy today?" + RESET);
+        System.out.print(BLUE + "Your Response " + YELLOW + "*FP*" + BLUE + ": " + RESET);
+        String freeResponseAnswer = keyboard.nextLine();
+
+        System.out.println(RED + "DEBUG: Response = " + freeResponseAnswer + RESET);
+        on = false;
+
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "That is awesome ! I am so glad to hear that. Would you like to hear about ways to stay happy?"
+                + RESET);
+        String yesOrNo = keyboard.nextLine().toLowerCase();
+        if (yesOrNo.equals("yes")) {
+            System.out.println(PURP + "friendBot: " + GREEN + " Here is what you should do: blah blah blah " + RESET);
+
+        } else if (yesOrNo.equals("yes")) {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN + " Okay, is there anything else you want to talk about? " + RESET);
+        }
+        System.exit(0);
+
     }
 }
