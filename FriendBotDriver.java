@@ -121,12 +121,12 @@ public class FriendBotDriver {
             runSad();
         } else if (ans.equals("3") || ans.equals("overwhelmed")) {
             runOverwhelmed();
-        } else if (ans.equals("4") || ans.equals("happy")) {
-            runHappy();
-        } else if (ans.equals("5") || ans.equals("happy")) {
-            runHappy();
-        } else if (ans.equals("6") || ans.equals("happy")) {
-            runHappy();
+        } else if (ans.equals("4") || ans.equals("stressed")) {
+            runStressed();
+        } else if (ans.equals("5") || ans.equals("lonely")) {
+            runLonely();
+        } else if (ans.equals("6") || ans.equals("Excited")) {
+            runExcited();
         } else if (ans.equals("7") || ans.equals("happy")) {
             runHappy();
         } else if (ans.equals("8") || ans.equals("happy")) {
@@ -135,6 +135,154 @@ public class FriendBotDriver {
             System.out
                     .println(RED + "Sorry, I couldn't read your response, please try using the options above." + RESET);
             promptUser();
+        }
+    }
+
+    public static void runExcited() {
+
+    }
+
+    public static void runLonely() {
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "You are not alone, I am here for you! What is making you feel lonely?"
+                + RESET);
+        System.out.print(BLUE + "Your Response " + YELLOW + "*FP*" + BLUE + ": " + RESET);
+        String freeResponseAnswer = keyboard.nextLine();
+
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "That's understandable. Would you like to hear about ways make you not feel lonely?"
+                + RESET);
+        System.out.println(CYAN + "1) Yes");
+        System.out.println("2) No \n");
+        System.out.print(BLUE + "Your Response : " + RESET);
+        String yesOrNo = keyboard.nextLine().toLowerCase();
+        if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
+            System.out.println(PURP + "friendBot: " + GREEN
+                    + "Think about adopting or fostering a pet to keep you company. You can also join a volunteer group to make new friends, or call your friends and family!"
+                    + RESET);
+            System.out
+                    .println(PURP + "friendBot: " + GREEN
+                            + " For more ways to deal with loneliness, you can visit this link: "
+                            + YELLOW
+                            + "https://www.cigna.com/knowledge-center/how-to-deal-with-loneliness\n\n");
+
+            System.out.println(
+                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
+            System.exit(0);
+        } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+            runNoResponse();
+        } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+            System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+            System.exit(0); // System exit 0 = clean exit.
+        } else {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                            + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            boolean on2 = true;
+            while (on2) {
+                String yesOrNo2 = keyboard.nextLine().toLowerCase();
+                if (yesOrNo2.equals("yes") || yesOrNo2.equals("1")) {
+                    System.out.println(PURP + "friendBot: " + GREEN
+                            + "Think about adopting or fostering a pet to keep you company. You can also join a volunteer group to make new friends, or call your friends and family!"
+                            + RESET);
+                    System.out
+                            .println(PURP + "friendBot: " + GREEN
+                                    + " For more ways to deal with loneliness, you can visit this link: "
+                                    + YELLOW
+                                    + "https://www.cigna.com/knowledge-center/how-to-deal-with-loneliness\n\n");
+
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
+                                    + RESET);
+                    System.exit(0);
+                } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+                    runNoResponse();
+                } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+                    System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+                    System.exit(0); // System exit 0 = clean exit.
+                } else {
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                                    + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                }
+            }
+
+        }
+    }
+
+    public static void runStressed() {
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "Life can get intense! I will try my best to make you feel more at ease. What is making you feel stressed?"
+                + RESET);
+        System.out.print(BLUE + "Your Response " + YELLOW + "*FP*" + BLUE + ": " + RESET);
+        String freeResponseAnswer = keyboard.nextLine();
+
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "That's understandable. Would you like to hear about ways to ease your stress?"
+                + RESET);
+        System.out.println(CYAN + "1) Yes");
+        System.out.println("2) No \n");
+        System.out.print(BLUE + "Your Response : " + RESET);
+        String yesOrNo = keyboard.nextLine().toLowerCase();
+        if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
+            System.out.println(PURP + "friendBot: " + GREEN
+                    + "Take some time to unwind and relax, put on some of your favorite music, or even go for a walk!"
+                    + RESET);
+            System.out
+                    .println(PURP + "friendBot: " + GREEN
+                            + " For more ways to ease your stress, you can visit this link: "
+                            + YELLOW
+                            + "https://www.cdc.gov/violenceprevention/about/copingwith-stresstips.html\n\n");
+
+            System.out.println(
+                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
+            System.exit(0);
+        } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+            runNoResponse();
+        } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+            System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+            System.exit(0); // System exit 0 = clean exit.
+        } else {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                            + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            boolean on2 = true;
+            while (on2) {
+                String yesOrNo2 = keyboard.nextLine().toLowerCase();
+                if (yesOrNo2.equals("yes") || yesOrNo2.equals("1")) {
+                    System.out.println(PURP + "friendBot: " + GREEN
+                            + "Take some time to unwind and relax, put on some of your favorite music, or even go for a walk!"
+                            + RESET);
+                    System.out
+                            .println(PURP + "friendBot: " + GREEN
+                                    + " For more ways to ease your stress, you can visit this link: "
+                                    + YELLOW
+                                    + "https://www.cdc.gov/violenceprevention/about/copingwith-stresstips.html\n\n");
+
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
+                                    + RESET);
+                    System.exit(0);
+                } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+                    runNoResponse();
+                } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+                    System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+                    System.exit(0); // System exit 0 = clean exit.
+                } else {
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                                    + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                }
+            }
+
         }
     }
 
@@ -159,7 +307,7 @@ public class FriendBotDriver {
             System.out
                     .println(PURP + "friendBot: " + GREEN + " For more ways to calm down, you can visit this link: "
                             + YELLOW
-                            + "https://www.mentalhealthfirstaid.org/2021/03/how-to-take-care-of-yourself-when-youre-feeling-overwhelmed/\n\n");
+                            + "https://www.mentalhealthfirstaid.org/2021/03/how-to-take-care-of-yourself-when-youre-feeling-overwhelmed\n\n");
 
             System.out.println(
                     PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
@@ -186,7 +334,7 @@ public class FriendBotDriver {
                             .println(PURP + "friendBot: " + GREEN
                                     + " For more ways to calm down, you can visit this link: "
                                     + YELLOW
-                                    + "https://www.mentalhealthfirstaid.org/2021/03/how-to-take-care-of-yourself-when-youre-feeling-overwhelmed/\n\n");
+                                    + "https://www.mentalhealthfirstaid.org/2021/03/how-to-take-care-of-yourself-when-youre-feeling-overwhelmed\n\n");
 
                     System.out.println(
                             PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
