@@ -51,6 +51,24 @@ public class FriendBotDriver {
         System.out.println("\n\n\n\n"); // Spacing
     }
 
+    public static void continueTalking() {
+
+        System.out.println(PURP + "friendBot: " + GREEN + "You wanted to talk some more! How are you feeling?" + RESET);
+        System.out.println(YELLOW + "**Responses availible**" + CYAN);
+        System.out.println("1) Happy");
+        System.out.println("2) Sad");
+        System.out.println("3) Overwhelmed");
+        System.out.println("4) Anxious");
+        System.out.println("5) Stressed");
+        System.out.println("6) Lonely");
+        System.out.println("7) Excited");
+        System.out.println("8) Embarrassed");
+        System.out.println("9) Tired");
+        System.out.println("10) one more");
+        System.out.println(RESET);
+
+    }
+
     public static void chatPrompt() {
 
         // How to Respond
@@ -58,10 +76,11 @@ public class FriendBotDriver {
                 + "**You can respond to friendBot using either the number (1,2,3) or the respective text(happy,sad,mad)**"
                 + RESET);
         System.out.println(
-                YELLOW + "                                   **Messages marked with *FP* are Free Response**"
+                YELLOW + "                                   ** Messages marked with *FP* are Free Response  **"
                         + RESET);
         System.out.println(
-                YELLOW + "                                   **Enter quit (or q) at anytime to leave.**\n" + RESET);
+                YELLOW + "                                     ** Enter quit (or q) at anytime to leave.  **\n"
+                        + RESET);
 
         // Initial Greeting
         System.out.println(PURP + "friendBot: " + GREEN + "Hello Friend! How are you feeling today?" + RESET);
@@ -77,6 +96,8 @@ public class FriendBotDriver {
         System.out.println("9) Tired");
         System.out.println("10) one more");
         System.out.println(RESET);
+
+        promptUser();
     }
 
     public static void promptUser() {
@@ -84,8 +105,6 @@ public class FriendBotDriver {
         while (on) {
             System.out.print(BLUE + "Your Response : " + RESET);
             String respond = keyboard.nextLine();
-
-            System.out.println(RED + "DEBUG:: RESPONSE = " + respond + RESET);
 
             responseReader(respond);
         }
@@ -106,27 +125,120 @@ public class FriendBotDriver {
     }
 
     public static void runHappy() {
-        System.out.println(RED + "DEBUG - inside Happy" + RESET);
         System.out.println(PURP + "friendBot: " + GREEN
                 + "Yay! That is great to hear! What is making you feel happy today?" + RESET);
         System.out.print(BLUE + "Your Response " + YELLOW + "*FP*" + BLUE + ": " + RESET);
         String freeResponseAnswer = keyboard.nextLine();
 
-        System.out.println(RED + "DEBUG: Response = " + freeResponseAnswer + RESET);
-        on = false;
-
         System.out.println(PURP + "friendBot: " + GREEN
                 + "That is awesome ! I am so glad to hear that. Would you like to hear about ways to stay happy?"
                 + RESET);
+        System.out.println(CYAN + "1) Yes");
+        System.out.println("2) No \n");
+        System.out.print(BLUE + "Your Response : " + RESET);
         String yesOrNo = keyboard.nextLine().toLowerCase();
-        if (yesOrNo.equals("yes")) {
-            System.out.println(PURP + "friendBot: " + GREEN + " Here is what you should do: blah blah blah " + RESET);
+        if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
+            System.out.println(PURP + "friendBot: " + GREEN
+                    + " You can stay happy by doing activites you enjoy or even just getting out and relaxing in the Sun!  "
+                    + RESET);
+            System.out.println(PURP + "friendBot: " + GREEN + " For more ways to stay happy, you can visit this link: "
+                    + YELLOW + "https://www.cigna.com/knowledge-center/how-to-be-happy\n\n");
 
-        } else if (yesOrNo.equals("yes")) {
             System.out.println(
-                    PURP + "friendBot: " + GREEN + " Okay, is there anything else you want to talk about? " + RESET);
+                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
+            System.exit(0);
+        } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+            runNoResponse();
+        } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+            System.out.println(PURP + "friendBot: Good bye! Have a good day !" + RESET);
+            System.exit(0); // System exit 0 = clean exit.
+        } else {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                            + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            boolean on2 = true;
+            while (on2) {
+                String yesOrNo2 = keyboard.nextLine().toLowerCase();
+                if (yesOrNo2.equals("yes") || yesOrNo2.equals("1")) {
+                    System.out.println(PURP + "friendBot: " + GREEN
+                            + " You can stay happy by doing activites you enjoy or even just getting out and relaxing in the Sun!  "
+                            + RESET);
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN + " For more ways to stay happy, you can visit this link: "
+                                    + YELLOW + "https://www.cigna.com/knowledge-center/how-to-be-happy\n\n");
+
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
+                                    + RESET);
+                    System.exit(0);
+                } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+                    runNoResponse();
+                } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+                    System.out.println(PURP + "friendBot: Good bye! Have a good day !" + RESET);
+                    System.exit(0); // System exit 0 = clean exit.
+                } else {
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                                    + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                }
+            }
+
         }
-        System.exit(0);
+
+    }
+
+    public static void runNoResponse() {
+        System.out.println(
+                PURP + "friendBot: " + GREEN + " Okay, is there anything else you want to talk about? " + RESET);
+        System.out.println(CYAN + "1) Yes");
+        System.out.println("2) No \n");
+        System.out.print(BLUE + "Your Response : " + RESET);
+        String yesOrNo = keyboard.nextLine().toLowerCase();
+
+        if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
+            continueTalking();
+
+        } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN + " Okay, I hope you have a great rest of your day ! Goodbye! "
+                            + RESET);
+        } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+            System.out.println(PURP + "friendBot: Good bye! Have a good day !" + RESET);
+            System.exit(0); // System exit 0 = clean exit.
+        }
+
+        else {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                            + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            boolean on2 = true;
+            while (on2) {
+                String yesOrNo2 = keyboard.nextLine().toLowerCase();
+                if (yesOrNo2.equals("yes") || yesOrNo2.equals("1")) {
+                    continueTalking();
+                } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + "Okay, I hope you have a great rest of your day! Goodbye !");
+                    System.exit(0);
+                } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+                    System.out.println(PURP + "friendBot: Good bye! Have a good day !" + RESET);
+                    System.exit(0); // System exit 0 = clean exit.
+                } else {
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                                    + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                }
+            }
+        }
 
     }
 }
