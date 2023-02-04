@@ -514,15 +514,15 @@ public class FriendBotDriver {
         String freeResponseAnswer = keyboard.nextLine();
 
         System.out.println(PURP + "friendBot: " + GREEN
-                + "That's understandable. Would you like to hear about ways make you not feel lonely?"
+                + "That's understandable. Would you like to hear about ways to make you not feel lonely?"
                 + RESET);
         System.out.println(CYAN + "1) Yes");
         System.out.println("2) No \n");
         System.out.print(BLUE + "Your Response : " + RESET);
         String yesOrNo = keyboard.nextLine().toLowerCase();
-        if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
+        if (yesOrNo.equals("yes") || yesOrNo.equals("1") || yesOrNo.equals("yes please")) {
             System.out.println(PURP + "friendBot: " + GREEN
-                    + "Think about adopting or fostering a pet to keep you company. You can also join a volunteer group to make new friends, or call your friends and family!"
+                    + " Think about adopting or fostering a pet to keep you company. You can also join a volunteer group to make new friends, or call your friends and family!"
                     + RESET);
             System.out
                     .println(PURP + "friendBot: " + GREEN
@@ -824,7 +824,7 @@ public class FriendBotDriver {
         String freeResponseAnswer = keyboard.nextLine();
 
         System.out.println(PURP + "friendBot: " + GREEN
-                + "I am sorry to hear that :( . Don't worry, it will pass. Would you like to hear about ways to overcome sadness?"
+                + "I am sorry to hear that :( . Don't worry, everything heals with time. Would you like to hear about ways to overcome sadness?"
                 + RESET);
         System.out.println(CYAN + "1) Yes");
         System.out.println("2) No \n");
@@ -832,7 +832,7 @@ public class FriendBotDriver {
         String yesOrNo = keyboard.nextLine().toLowerCase();
         if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
             System.out.println(PURP + "friendBot: " + GREEN
-                    + " You can stay overcome your sadness by being around other people or watching your favorite movie! Pets are also a great companion to help boost your mood."
+                    + " You can overcome your sadness by being around other people or watching your favorite movie! Pets are also a great companion to help boost your mood."
                     + RESET);
             System.out
                     .println(PURP + "friendBot: " + GREEN
@@ -859,7 +859,7 @@ public class FriendBotDriver {
                 String yesOrNo2 = keyboard.nextLine().toLowerCase();
                 if (yesOrNo2.equals("yes") || yesOrNo2.equals("1")) {
                     System.out.println(PURP + "friendBot: " + GREEN
-                            + " You can stay overcome your sadness by being around other people or watching your favorite movie! Pets are also a great companion to help boost your mood."
+                            + " You can overcome your sadness by being around other people or watching your favorite movie! Pets are also a great companion to help boost your mood."
                             + RESET);
                     System.out
                             .println(PURP + "friendBot: " + GREEN
