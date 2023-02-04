@@ -139,7 +139,71 @@ public class FriendBotDriver {
     }
 
     public static void runExcited() {
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "Yay! I am happy you are excited ! What is making you feel excited?" + RESET);
+        System.out.print(BLUE + "Your Response " + YELLOW + "*FP*" + BLUE + ": " + RESET);
+        String freeResponseAnswer = keyboard.nextLine();
 
+        System.out.println(PURP + "friendBot: " + GREEN
+                + "That is EXCITING! I am so glad to hear that. Would you like to hear more about excitement?"
+                + RESET);
+        System.out.println(CYAN + "1) Yes");
+        System.out.println("2) No \n");
+        System.out.print(BLUE + "Your Response : " + RESET);
+        String yesOrNo = keyboard.nextLine().toLowerCase();
+        if (yesOrNo.equals("yes") || yesOrNo.equals("1")) {
+            System.out.println(PURP + "friendBot: " + GREEN
+                    + " Excitement is a tempory , but powerful emotion! It breaks up the boredom and makes us appreciate our lives! "
+                    + RESET);
+            System.out.println(
+                    PURP + "friendBot: " + GREEN + " For more information about being excited, check out this link : "
+                            + YELLOW + "https://divethru.com/feeling-excited-a-guide-to-your-emotions/\n\n");
+
+            System.out.println(
+                    PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n" + RESET);
+            System.exit(0);
+        } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+            runNoResponse();
+        } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+            System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+            System.exit(0); // System exit 0 = clean exit.
+        } else {
+            System.out.println(
+                    PURP + "friendBot: " + GREEN
+                            + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                            + RESET);
+            System.out.print(BLUE + "Your Response : " + RESET);
+            boolean on2 = true;
+            while (on2) {
+                String yesOrNo2 = keyboard.nextLine().toLowerCase();
+                if (yesOrNo2.equals("yes") || yesOrNo2.equals("1")) {
+                    System.out.println(PURP + "friendBot: " + GREEN
+                            + " Excitement is a tempory , but powerful emotion! It breaks up the boredom and makes us appreciate our lives! "
+                            + RESET);
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + " For more information about being excited, check out this link : "
+                                    + YELLOW + "https://divethru.com/feeling-excited-a-guide-to-your-emotions/\n\n");
+
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN + " I hope you have a great rest of your day! Goodbye!\n"
+                                    + RESET);
+                    System.exit(0);
+                } else if (yesOrNo.equals("no") || yesOrNo.equals("2")) {
+                    runNoResponse();
+                } else if (yesOrNo.equals("q") || yesOrNo.equals("quit")) {
+                    System.out.println(PURP + "friendBot: " + GREEN + "Goodbye! Have a good day !" + RESET);
+                    System.exit(0); // System exit 0 = clean exit.
+                } else {
+                    System.out.println(
+                            PURP + "friendBot: " + GREEN
+                                    + "I'm sorry, I didn't understand your response. Please respond with either yes or no."
+                                    + RESET);
+                    System.out.print(BLUE + "Your Response : " + RESET);
+                }
+            }
+
+        }
     }
 
     public static void runLonely() {
